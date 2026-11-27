@@ -34,6 +34,15 @@ def search_name(names, name):
             return True
     return False
 
+# Written by: Rawan Senjab (task 8)
+def remove_duplicates(names):
+    unique_names = []
+
+    for name in names:
+        if name not in unique_names:
+            unique_names.append(name)
+
+    return unique_names
  
 def main():
     print("Welcome to the Class List Manager!")
