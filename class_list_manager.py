@@ -27,7 +27,12 @@ def names_starting_with(names, letter): # task 5
         return []
     target = letter.strip().lower()[0]
     return [name for name in names if name.strip().lower().startswith(target)]
-
+# Written by: Lana Aldraian (task 2)
+def search_name(names, name):
+    for n in names:
+        if n.lower() == name.lower():
+            return True
+    return False
 
  
 def main():
@@ -37,6 +42,6 @@ def main():
     print("Upper names:", to_upper(names))
     print("Sorted names:", sort_names(names))
     print("Names starting with A:", names_starting_with(names, "A"))
- 
- 
+    print("Is Reem in the list?", search_name(names, "Reem"))
+
 main()
